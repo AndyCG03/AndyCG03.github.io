@@ -3,17 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1f242d;
 }
 
 a {
     color: #fff;
     text-decoration: none;
 }
-
-body{
-    background: #1f242d;
-}
-
 
 .navbar {
     position: fixed;
@@ -394,4 +390,8 @@ body{
 .some-projects ul li:hover a,
 .some-projects ul li.active a {
     color: #7cf03d;
+}
+
+body{
+    background: #1f242d;
 }
