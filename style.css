@@ -322,6 +322,7 @@ a {
 }
 
 .education .some-projects{
+    position: relative;
     padding-left: 10%;
     padding-right: 9%;
 }
@@ -341,6 +342,49 @@ a {
     color: #7cf03d;
 }
 
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 1200px) {
+    .education{
+        display: block;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 5%;
+        text-align: center;
+        height: auto;
+    }
+
+    .home-info {
+        display: block;
+        padding-top: 50px;
+    }
+
+    .home-info h1 {
+        padding: 15px;
+    }
+
+    .education .education-content,
+    .education .some-projects {
+        padding: 0 1%; /* Ajusta padding en pantallas más pequeñas */
+        margin-bottom: 50px;
+    }
+    
+    .education .education-content h2,
+    .education .some-projects h2 {
+        font-size: 32px;
+    }
+
+    .education .education-content ul,
+    .education .some-projects ul {
+        font-size: 14px;
+    }
+}
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -352,9 +396,9 @@ a {
 
     .navbar .menu{
         display: none;
-        flex-direction: row-reverse;
+        flex-direction: row;
         position: absolute;
-        top: 80px; /* Ajusta la altura para que esté más arriba */
+        top: 50px; /* Ajusta la altura para que esté más arriba */
         right: 5%; /* Alineado hacia la derecha */
         width: auto; /* Adapta el ancho al contenido */
         background-color: #1f242d;
@@ -396,8 +440,8 @@ a {
     }
 
     .home-info h1 {
-        padding: 40px;
-        font-size: 36px;
+        padding: 15px;
+        font-size: 32px;
     }
 
     .home-info h2 {
@@ -408,16 +452,15 @@ a {
         font-size: 14px;
     }
 
-    /* Ajustes en la sección .education */
-    .education {
-        text-align: left;
-        display: block;
+    .education .education-content,
+    .education .some-projects {
+        padding: 0 1%; /* Ajusta padding en pantallas más pequeñas */
+        margin-bottom: 50px;
     }
-
+    
     .education .education-content h2,
     .education .some-projects h2 {
         font-size: 32px;
-        padding: 20px 9%;
     }
 
     .education .education-content ul,
@@ -428,6 +471,12 @@ a {
     /* Ajusta botones y texto */
     .btn {
         font-size: 14px;
+        align-items: center;
+    }
+
+    .btn-sci{
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .sci a {
@@ -435,59 +484,8 @@ a {
         font-size: 16px;
         margin: 0 4px;
     }
-}
-
-
-/* Para ocultar el menú en pantallas pequeñas */
-/*
-@media (max-width: 768px) {
-    .navbar .menu {
-        display: none;
-        flex-direction: row;
-        position: absolute;
-        top: 150px;
-        margin-left: 6.5%;
-        left: 0;
-        width: 100%;
-        background-color: #1f242d;
-        padding: 0;
-    }
-*/
-/* 
-    .navbar .menu.show {
-        display: flex;
-    }
-
-
-    .menu-toggle {
-        display: block;
-    }
-
-
-    .navbar .menu li {
-        display: inline;
-        margin: 5px 0;
-    }
-
-
-    .navbar .menu li a {
-        font-size: 14px;
-        padding: 8px 12px;
-        margin: 0;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-    }
-
 
     .home-img {
         display: none;
     }
-
-    .sci a {
-        display: inline-block;
-        padding: 2px;
-        font-size: 15px;
-        margin: 0 2px;
-    }
-}  */
+}
