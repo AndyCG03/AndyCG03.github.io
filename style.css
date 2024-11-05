@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
     background: #1f242d;
 }
 
@@ -62,9 +65,9 @@ a {
 .home {
     display: flex;
     align-items: center;
-    height: 60vh;
-    gap: 50px;
+    height: 45vh;
     padding: 60px 9% 0;
+    padding-bottom: 0px;
     color: #fff;
     visibility: hidden;
     opacity: 0;
@@ -72,8 +75,10 @@ a {
     animation-delay: 1.6s;
 }
 
+
 .home-info h1 {
     font-size: 50px;
+    padding-bottom: 10px;
 }
 
 .home-info h2 {
@@ -147,6 +152,22 @@ a {
     transition: .5s;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    /* Opcional: para añadir espacio alrededor del contenido */
+}
+
+.btn-sci button {
+    margin-right: 15px;
+}
+
+.btn-sci {
+    text-align: center;
+}
+
 .btn:hover {
     background: transparent;
     color: #7cf03d;
@@ -154,13 +175,13 @@ a {
 }
 
 .sci {
-    margin-left: 20px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .sci a {
     display: inline-flex;
-    padding: 8px;
+    padding: 4px;
     border: 2px solid #7cf03d;
     border-radius: 50%;
     font-size: 20px;
@@ -169,7 +190,6 @@ a {
     transition: .5s;
 }
 
-
 .sci a:hover {
     background: #7cf03d;
     color: #1f242d;
@@ -177,7 +197,9 @@ a {
 }
 
 .home-img {
+    padding-left: 50px;
     padding-top: 270px;
+    z-index: 1;
 }
 
 .home-img .img-box {
@@ -215,10 +237,10 @@ a {
 }
 
 .home-img .img-box .img-item {
+    background: #1f242d;
     position: relative;
     width: 100%;
     height: 100%;
-    background: #1f242d;
     border-radius: 50%;
     border: .1px solid #1f242d;
     z-index: 1;
@@ -266,7 +288,7 @@ a {
     list-style: none;
 }
 
-.navbar{
+.navbar {
     background-color: #1f242d;
 }
 
@@ -291,7 +313,6 @@ a {
 .education {
     display: -webkit-flex;
     z-index: -100;
-    background: transparent;
     height: 100%;
     padding: 0 9% 0;
     color: #fff;
@@ -306,33 +327,33 @@ a {
     color: #fff;
 }
 
-.education .education-content h3{
+.education .education-content h3 {
     padding-top: 10px;
     padding-left: 12%;
     margin-top: -10px;
 }
 
-.education .education-content ul{
+.education .education-content ul {
     padding-left: 18%;
     font-size: 16px;
 }
 
-.education .education-content ul li{
+.education .education-content ul li {
     list-style: disc;
 }
 
-.education .some-projects{
+.education .some-projects {
     position: relative;
     padding-left: 10%;
     padding-right: 9%;
 }
 
-.education .some-projects h2{
+.education .some-projects h2 {
     font-size: 50px;
     color: #fff;
 }
 
-.education .some-projects ul{
+.education .some-projects ul {
     padding-left: 18%;
     font-size: 16px;
 }
@@ -342,49 +363,31 @@ a {
     color: #7cf03d;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 1200px) {
-    .education{
-        display: block;
-    }
 
+@media (max-width: 1200px) {
     .home-img {
         display: none;
     }
 
-    .home {
-        flex-direction: column;
-        padding: 5%;
+    /* Centrar la sección education en el navegador */
+    .education {
+        display: flex;
+        justify-content: center;
+        /* Centra horizontalmente */
+    }
+
+    .education-content,
+    .some-projects {
+        margin: 0 20px;
+        /* Espacio entre los dos divs */
+    }
+
+    .education-content h2,
+    .some-projects h2 {
         text-align: center;
-        height: auto;
-    }
-
-    .home-info {
-        display: block;
-        padding-top: 50px;
-    }
-
-    .home-info h1 {
-        padding: 15px;
-    }
-
-    .education .education-content,
-    .education .some-projects {
-        padding: 0 1%; /* Ajusta padding en pantallas más pequeñas */
-        margin-bottom: 50px;
-    }
-    
-    .education .education-content h2,
-    .education .some-projects h2 {
-        font-size: 32px;
-    }
-
-    .education .education-content ul,
-    .education .some-projects ul {
-        font-size: 14px;
+        /* Centra los títulos dentro de cada div */
     }
 }
-
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -394,19 +397,22 @@ a {
         padding: 15px 5%;
     }
 
-    .navbar .menu{
+    .navbar .menu {
         display: none;
         flex-direction: row;
         position: absolute;
-        top: 50px; /* Ajusta la altura para que esté más arriba */
-        right: 5%; /* Alineado hacia la derecha */
-        width: auto; /* Adapta el ancho al contenido */
+        top: 50px;
+        /* Ajusta la altura para que esté más arriba */
+        right: 5%;
+        /* Alineado hacia la derecha */
+        width: auto;
+        /* Adapta el ancho al contenido */
         background-color: #1f242d;
         padding: 10px 20px;
         border-radius: 8px;
     }
 
-    .navbar .menu a{
+    .navbar .menu a {
         font-size: 15px;
         background: transparent;
         padding: 0;
@@ -430,7 +436,9 @@ a {
     /* Ajusta la sección de "home" en dispositivos móviles */
     .home {
         flex-direction: column;
-        padding: 100px 5%;
+        padding-bottom: 0%;
+        padding: 0 5%;
+        padding-top: 85px;
         text-align: center;
         height: auto;
     }
@@ -454,10 +462,11 @@ a {
 
     .education .education-content,
     .education .some-projects {
-        padding: 0 1%; /* Ajusta padding en pantallas más pequeñas */
+        padding: 0 1%;
+        /* Ajusta padding en pantallas más pequeñas */
         margin-bottom: 50px;
     }
-    
+
     .education .education-content h2,
     .education .some-projects h2 {
         font-size: 32px;
@@ -466,23 +475,6 @@ a {
     .education .education-content ul,
     .education .some-projects ul {
         font-size: 14px;
-    }
-
-    /* Ajusta botones y texto */
-    .btn {
-        font-size: 14px;
-        align-items: center;
-    }
-
-    .btn-sci{
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    .sci a {
-        padding: 6px;
-        font-size: 16px;
-        margin: 0 4px;
     }
 
     .home-img {
